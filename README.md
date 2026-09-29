@@ -9,9 +9,9 @@ endpoint, a batch transform job, and clean-up. It runs in SageMaker Studio or
 a SageMaker notebook instance.
 [`sample-input.parquet`](aws-sagemaker/sample-input.parquet) and
 [`sample-output.json`](aws-sagemaker/sample-output.json) are its
-classification request and response. The breast cancer data only
-demonstrates the request format; Causilo is not intended for medical
-diagnosis.
+classification request and response: 50,000 Covertype rows with the answer
+and 1,000 without, the split behind the validation figures on the AWS
+Marketplace listing.
 
 - Documentation: https://docs.nums.world/reference (hosted API; SageMaker limits are in the notebook)
 - Technical report: https://arxiv.org/abs/2609.22866
@@ -30,11 +30,10 @@ non-commercial research, testing and evaluation. Commercial or production use
 of Causilo or its outputs, or offering it as a hosted or API service, paid or
 free, needs a separate license from Nums AI Inc. (api@nums.world).
 
-`aws-sagemaker/sample-input.parquet` contains the Breast Cancer Wisconsin
-(Diagnostic) dataset: Wolberg, W., Mangasarian, O., Street, N. and Street, W.
-(1993), UCI Machine Learning Repository, https://doi.org/10.24432/C5DW2B,
-licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). It
-was taken from scikit-learn's copy (ID column dropped, columns renamed) and
-changed: diagnosis mapped to `malignant`/`benign` as `target`, rows shuffled,
-the label removed from 100 rows, and request parameters added to the file
-metadata.
+`aws-sagemaker/sample-input.parquet` contains part of the Covertype dataset:
+Blackard, J. (1998), UCI Machine Learning Repository,
+https://doi.org/10.24432/C50K5N, licensed under
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). It was taken from
+scikit-learn's copy and changed: 51,000 of the 581,012 rows selected at random,
+the target column renamed from `Cover_Type` to `y`, the label removed from
+1,000 rows, and request parameters added to the file metadata.
