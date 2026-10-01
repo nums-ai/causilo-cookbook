@@ -13,7 +13,7 @@ classification request and response: 50,000 Covertype rows with the answer
 and 1,000 without, the split behind the validation figures on the AWS
 Marketplace listing.
 
-- Documentation: https://docs.nums.world/reference (hosted API; SageMaker limits are in the notebook)
+- Documentation: https://docs.nums.world/reference (hosted API; its row, column, cell and class limits also apply on SageMaker, its account quotas and rate limits do not)
 - Technical report: https://arxiv.org/abs/2609.22866
 - Support: api@nums.world
 
